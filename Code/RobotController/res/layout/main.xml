@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1">
+
+      <ImageView
+          android:id="@+id/ImageView1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#ffffff" />
+      
+  </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_weight="1" >
+
+      <ToggleButton
+          android:id="@+id/toggleVideo"
+          android:layout_width="40dp"
+          android:layout_height="30dp"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:checked="false"
+          android:onClick="onToggleVideo"
+          android:text="Video"
+          android:textOff="Video"
+          android:textOn="Video" />
+
+      <ToggleButton
+          android:id="@+id/toggleBuzzer"
+          android:layout_width="40dp"
+          android:layout_height="30dp"
+          android:layout_alignParentTop="true"
+          android:layout_alignTop="@+id/toggleVideo"
+          android:layout_toRightOf="@+id/buttonRight"
+          android:checked="false"
+          android:onClick="onToggleBuzzer"
+          android:text="Buzzer" />
+
+      <Button
+          android:id="@+id/buttonUp"
+          android:layout_width="60dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/textVideo"
+          android:layout_centerHorizontal="true"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp"
+          android:layout_marginTop="5dp"
+          android:layout_weight="1"
+          android:background="#ffffff"
+          android:onClick="onButtonUpClicked"
+          android:padding="10dp"
+          android:text="Front"
+          android:textSize="5pt" />
+
+      <Button
+          android:id="@+id/buttonDown"
+          android:layout_width="60dp"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@id/buttonUp"
+          android:layout_alignRight="@id/buttonUp"
+          android:layout_below="@id/buttonUp"
+          android:layout_marginTop="7dp"
+          android:layout_weight="1"
+          android:background="#ffffff"
+          android:onClick="onButtonDownClicked"
+          android:padding="10dp"
+          android:text="Back"
+          android:textSize="5pt" />
+
+      <Button
+          android:id="@+id/buttonRight"
+          android:layout_width="60dp"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@id/buttonDown"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="2dp"
+          android:layout_toRightOf="@id/buttonDown"
+          android:layout_weight="1"
+          android:background="#ffffff"
+          android:onClick="onButtonRightClicked"
+          android:padding="10dp"
+          android:text="Right"
+          android:textSize="5pt" />
+
+      <Button
+          android:id="@+id/buttonLeft"
+          android:layout_width="60dp"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@id/buttonDown"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="10dp"
+          android:layout_toLeftOf="@id/buttonDown"
+          android:layout_weight="1"
+          android:background="#ffffff"
+          android:onClick="onButtonLeftClicked"
+          android:padding="10dp"
+          android:text="Left"
+          android:textSize="5pt" />
+
+      <TextView
+          android:id="@+id/textVideo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/toggleVideo"
+          android:layout_centerHorizontal="true"
+          android:text="Video"
+          android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      <TextView
+          android:id="@+id/textBuzzer"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignRight="@+id/toggleBuzzer"
+          android:layout_alignTop="@+id/textVideo"
+          android:layout_below="@+id/toggleBuzzer"
+          android:text="Buzzer"
+          android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      <EditText
+          android:id="@+id/IpText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@+id/textVideo" >
+
+          <requestFocus />
+      </EditText>
+
+      <Button
+          android:id="@+id/connectbutton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/button1"
+          android:onClick="onbuttonConnect"
+          android:text="Connect" />
+
+      <ToggleButton
+          android:id="@+id/Accelerometer"
+          android:layout_width="40dp"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/textVideo"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="20dp"
+          android:onClick="buttonAccelerometer" />
+
+      <TextView
+          android:id="@+id/accelerometertext"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/buttonUp"
+          android:layout_alignParentLeft="true"
+          android:text="Acceleromter"
+          android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/textVideo"
+          android:layout_alignParentBottom="true"
+          android:onClick="onButtonDisconnect"
+          android:text="Disconnect" />
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/connectbutton"
+          android:layout_alignLeft="@+id/button1"
+          android:layout_alignParentRight="true"
+          android:onClick="startSMSAlert"
+          android:text="Enable SMS Alert" />
+
+      <Button
+          android:id="@+id/button3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/IpText"
+          android:layout_alignParentLeft="true"
+          android:layout_toLeftOf="@+id/button2"
+          android:text="Stop Robot"
+          android:onClick="stopRobot" />
+
+  </RelativeLayout>
+
+</LinearLayout>
